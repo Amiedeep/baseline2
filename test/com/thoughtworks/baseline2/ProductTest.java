@@ -43,4 +43,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isFood("1 imported box of something at 10.00"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsFoodWithNullInputItems() {
+        product = new Product();
+        assertEquals(product.isFood(null), false);
+    }
 }
