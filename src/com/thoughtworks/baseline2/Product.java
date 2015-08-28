@@ -12,7 +12,7 @@ public class Product {
         if(input == null) {
             return false;
         }
-        return true;
+        return false;
     }
 
     public double calculateTax() {

@@ -14,4 +14,10 @@ public class ProductTest {
         product = new Product(null);
         assertEquals(product.isImported(null), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenWhenICallIsImportedWithNotImportedInput() {
+        product = new Product("1 bottle of perfume at 18.99");
+        assertEquals(product.isImported("1 bottle of perfume at 18.99"), false);
+    }
 }
