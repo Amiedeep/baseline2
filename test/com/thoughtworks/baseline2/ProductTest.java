@@ -49,4 +49,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isFood(null), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsFoodWithChocolateFoodInputItems() {
+        product = new Product();
+        assertEquals(product.isFood("1 box of imported chocolates at 11.25"), true);
+    }
 }

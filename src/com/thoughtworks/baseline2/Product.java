@@ -14,7 +14,7 @@ public class Product {
     }
 
     public boolean isFood(String input) {
-        return false;
+        return input.contains("chocolate");
     }
 
     public double calculateTax() {
