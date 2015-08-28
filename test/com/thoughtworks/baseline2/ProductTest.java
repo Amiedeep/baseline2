@@ -110,4 +110,10 @@ public class ProductTest {
         product = new Product("1 imported box of chocolates at 10.00");
         assertEquals(0.50, product.calculateTax());
     }
+
+    @Test
+    public void shouldReturnOnlyExemptedTaxWhenNonExemptedAndNonImportedItemIsPassed() {
+        product = new Product("1 music CD at 14.99");
+        assertEquals(1.50, product.calculateTax());
+    }
 }

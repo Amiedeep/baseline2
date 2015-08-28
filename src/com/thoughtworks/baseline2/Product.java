@@ -52,6 +52,10 @@ public class Product {
 
     public double calculateTax() {
         int interestRate;
+        if(!isExempted(input)) {
+            interestRate = 10;
+            addTax(interestRate);
+        }
         if(isImported(input)) {
             interestRate = 5;
             addTax(interestRate);
