@@ -31,4 +31,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isExempted(null), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsExemptedWithNotExemptedInputItems() {
+        product = new Product();
+        assertEquals(product.isExempted("1 bottle of perfume at 18.99"), false);
+    }
 }
