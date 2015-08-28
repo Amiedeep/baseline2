@@ -33,32 +33,38 @@ public class ProductTest {
     }
 
     @Test
-    public void shouldReturnFalseWhenICallIsExemptedWithNotExemptedInputItems() {
+    public void shouldReturnFalseWhenICallIsExemptedWithNotExemptedInputItem() {
         product = new Product();
         assertEquals(product.isExempted("1 bottle of perfume at 18.99"), false);
     }
 
     @Test
-    public void shouldReturnFalseWhenICallIsFoodWithNonFoodInputItems() {
+    public void shouldReturnFalseWhenICallIsFoodWithNonFoodInputItem() {
         product = new Product();
         assertEquals(product.isFood("1 imported box of something at 10.00"), false);
     }
 
     @Test
-    public void shouldReturnFalseWhenICallIsFoodWithNullInputItems() {
+    public void shouldReturnFalseWhenICallIsFoodWithNullInputItem() {
         product = new Product();
         assertEquals(product.isFood(null), false);
     }
 
     @Test
-    public void shouldReturnFalseWhenICallIsFoodWithChocolateFoodInputItems() {
+    public void shouldReturnFalseWhenICallIsFoodWithChocolateFoodInputItem() {
         product = new Product();
         assertEquals(product.isFood("1 box of imported chocolates at 11.25"), true);
     }
 
     @Test
-    public void shouldReturnFalseWhenICallIsMedicalProductWithNonMedicalInputItems() {
+    public void shouldReturnFalseWhenICallIsMedicalProductWithNonMedicalInputItem() {
         product = new Product();
         assertEquals(product.isMedicalProduct("1 imported box of something at 10.00"), false);
+    }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsMedicalProductWithNullAsInputItem() {
+        product = new Product();
+        assertEquals(product.isMedicalProduct(null), false);
     }
 }
