@@ -17,6 +17,10 @@ public class Product {
         return input.contains("chocolate");
     }
 
+    public boolean isMedicalProduct(String input) {
+        return false;
+    }
+
     public double calculateTax() {
         return 0.0;
     }

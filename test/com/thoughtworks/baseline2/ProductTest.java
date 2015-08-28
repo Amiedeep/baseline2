@@ -55,4 +55,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isFood("1 box of imported chocolates at 11.25"), true);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsMedicalProductWithNonMedicalInputItems() {
+        product = new Product();
+        assertEquals(product.isMedicalProduct("1 imported box of something at 10.00"), false);
+    }
 }
