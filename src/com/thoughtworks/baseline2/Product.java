@@ -51,6 +51,19 @@ public class Product {
     }
 
     public double calculateTax() {
+        int interestRate;
+        if(isImported(input)) {
+            interestRate = 5;
+            addTax(interestRate);
+        }
         return salesTax;
+    }
+
+    private void addTax(int interestRate) {
+        salesTax += roundamount((price * interestRate) / 100);
+    }
+
+    private double roundamount(double amount) {
+        return (double)round(amount * 100) / 100;
     }
 }

@@ -7,6 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 public class BaselineTest {
 
     Baseline baseline;
+
     @Test
     public void shouldReturnZeroWhenExemptedAndNotImportedItemIsPassed() {
         baseline = new Baseline();

@@ -99,4 +99,9 @@ public class ProductTest {
         assertEquals(product.isBook("1 book at 12.49"), true);
     }
 
+    @Test
+    public void shouldReturnOnlyImportDutyWhenExemptedItemIsPassed() {
+        product = new Product("1 imported box of chocolates at 10.00");
+        assertEquals(0.50, product.calculateTax());
+    }
 }
