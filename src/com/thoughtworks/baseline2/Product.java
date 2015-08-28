@@ -13,6 +13,10 @@ public class Product {
         return false;
     }
 
+    public boolean isFood(String input) {
+        return false;
+    }
+
     public double calculateTax() {
         return 0.0;
     }

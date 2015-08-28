@@ -37,4 +37,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isExempted("1 bottle of perfume at 18.99"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsFoodWithNonFoodInputItems() {
+        product = new Product();
+        assertEquals(product.isFood("1 imported box of something at 10.00"), false);
+    }
 }
