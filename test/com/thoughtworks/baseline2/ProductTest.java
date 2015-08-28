@@ -85,4 +85,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isBook(null), false);
     }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsBookWithSomeBookAsInputItem() {
+        product = new Product();
+        assertEquals(product.isBook("1 book at 12.49"), true);
+    }
 }

@@ -28,7 +28,10 @@ public class Product {
     }
 
     public boolean isBook(String input) {
-        return false;
+        if(input == null) {
+            return false;
+        }
+        return input.contains("book");
     }
 
     public double calculateTax() {
