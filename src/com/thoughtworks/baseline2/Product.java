@@ -10,7 +10,7 @@ public class Product {
     }
 
     public boolean isExempted(String input) {
-        return isFood(input);
+        return isFood(input) || isMedicalProduct(input);
     }
 
     public boolean isFood(String input) {
