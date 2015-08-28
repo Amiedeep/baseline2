@@ -79,4 +79,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isMedicalProduct("1 imported box of something at 10.00"), false);
     }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsBookWithNullAsInputItem() {
+        product = new Product();
+        assertEquals(product.isMedicalProduct(null), false);
+    }
 }
