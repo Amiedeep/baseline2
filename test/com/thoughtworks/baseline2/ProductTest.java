@@ -11,19 +11,19 @@ public class ProductTest {
 
     @Test
     public void shouldReturnFalseWhenICallIsImportedWithNull() {
-        product = new Product("");
+        product = new Product();
         assertEquals(product.isImported(null), false);
     }
 
     @Test
     public void shouldReturnFalseWhenICallIsImportedWithNotImportedInput() {
-        product = new Product("");
+        product = new Product();
         assertEquals(product.isImported("1 bottle of perfume at 18.99"), false);
     }
 
     @Test
     public void shouldReturnTrueWhenICallIsImportedWithImportedInput() {
-        product = new Product("");
+        product = new Product();
         assertEquals(product.isImported("1 imported bottle of perfume at 27.99"), true);
     }
 }
