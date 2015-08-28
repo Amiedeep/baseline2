@@ -67,4 +67,10 @@ public class ProductTest {
         product = new Product();
         assertEquals(product.isMedicalProduct(null), false);
     }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsMedicalProductSomeMedicalProductAsInputItem() {
+        product = new Product();
+        assertEquals(product.isMedicalProduct("1 packet of headache pills at 9.75"), true);
+    }
 }

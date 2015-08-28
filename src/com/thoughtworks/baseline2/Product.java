@@ -14,11 +14,17 @@ public class Product {
     }
 
     public boolean isFood(String input) {
+        if(input == null) {
+            return false;
+        }
         return input.contains("chocolate");
     }
 
     public boolean isMedicalProduct(String input) {
-        return false;
+        if(input == null) {
+            return false;
+        }
+        return input.contains("headache pills");
     }
 
     public double calculateTax() {
