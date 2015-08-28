@@ -27,6 +27,10 @@ public class Product {
         return input.contains("headache pills");
     }
 
+    public boolean isBook(String input) {
+        return false;
+    }
+
     public double calculateTax() {
         return 0.0;
     }
