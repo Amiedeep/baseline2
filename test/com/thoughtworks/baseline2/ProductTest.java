@@ -51,6 +51,12 @@ public class ProductTest {
     }
 
     @Test
+    public void shouldReturnTrueWhenICallIsExemptedWithSomeBookInputItem() {
+        product = new Product();
+        assertEquals(product.isExempted("1 book at 12.49"), true);
+    }
+
+    @Test
     public void shouldReturnFalseWhenICallIsFoodWithNonFoodInputItem() {
         product = new Product();
         assertEquals(product.isFood("1 imported box of something at 10.00"), false);
