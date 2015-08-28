@@ -1,6 +1,5 @@
 package com.thoughtworks.baseline2;
 
-
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
@@ -25,5 +24,11 @@ public class ProductTest {
     public void shouldReturnTrueWhenICallIsImportedWithImportedInput() {
         product = new Product();
         assertEquals(product.isImported("1 imported bottle of perfume at 27.99"), true);
+    }
+
+    @Test
+    public void shouldReturnFalseWhenICallIsExemptedWithNull() {
+        product = new Product();
+        assertEquals(product.isExempted(null), false);
     }
 }

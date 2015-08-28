@@ -9,6 +9,10 @@ public class Product {
         return input.contains("imported");
     }
 
+    public boolean isExempted(String input) {
+        return false;
+    }
+
     public double calculateTax() {
         return 0.0;
     }

@@ -3,7 +3,7 @@
 
     <property name = "project.name" value="baseline2" />
     <property name = "main.name" value="Baseline" />
-    <property name = "package.name" value="com.thoughtworks.baseline" />
+    <property name = "package.name" value="com.thoughtworks.baseline2" />
 
     <target name="build" depends="clean">
         <mkdir dir="out"/>
