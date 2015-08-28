@@ -12,7 +12,7 @@ public class Product {
         if(input == null) {
             return false;
         }
-        return false;
+        return input.contains("imported");
     }
 
     public double calculateTax() {

@@ -10,14 +10,20 @@ public class ProductTest {
     Product product;
 
     @Test
-    public void shouldReturnFalseWhenWhenICallIsImportedWithNull() {
-        product = new Product(null);
+    public void shouldReturnFalseWhenICallIsImportedWithNull() {
+        product = new Product("");
         assertEquals(product.isImported(null), false);
     }
 
     @Test
-    public void shouldReturnFalseWhenWhenICallIsImportedWithNotImportedInput() {
-        product = new Product("1 bottle of perfume at 18.99");
+    public void shouldReturnFalseWhenICallIsImportedWithNotImportedInput() {
+        product = new Product("");
         assertEquals(product.isImported("1 bottle of perfume at 18.99"), false);
+    }
+
+    @Test
+    public void shouldReturnTrueWhenICallIsImportedWithImportedInput() {
+        product = new Product("");
+        assertEquals(product.isImported("1 imported bottle of perfume at 27.99"), true);
     }
 }
