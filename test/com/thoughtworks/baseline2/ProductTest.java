@@ -100,6 +100,12 @@ public class ProductTest {
     }
 
     @Test
+    public void shouldReturnZeroWhenExemptedNonImportedItemIsPassed() {
+        product = new Product("1 book at 12.49");
+        assertEquals(0.0, product.calculateTax());
+    }
+
+    @Test
     public void shouldReturnOnlyImportDutyWhenExemptedItemIsPassed() {
         product = new Product("1 imported box of chocolates at 10.00");
         assertEquals(0.50, product.calculateTax());
