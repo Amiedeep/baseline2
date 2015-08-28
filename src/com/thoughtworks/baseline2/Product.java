@@ -10,7 +10,7 @@ public class Product {
     }
 
     public boolean isExempted(String input) {
-        return false;
+        return isFood(input);
     }
 
     public boolean isFood(String input) {
