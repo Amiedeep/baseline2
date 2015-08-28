@@ -1,6 +1,22 @@
 package com.thoughtworks.baseline2;
 
+import static java.lang.Math.round;
+
 public class Product {
+
+    private String input;
+    private double salesTax;
+    private double price;
+
+    public Product(String input) {
+        this.input = input;
+        parsePrice(input);
+    }
+
+    private void parsePrice(String input) {
+        String[] inputarray = input.split(" ");
+        price = Double.parseDouble(inputarray[inputarray.length-1]);
+    }
 
     public boolean isImported(String input) {
         if(input == null) {
@@ -35,6 +51,6 @@ public class Product {
     }
 
     public double calculateTax() {
-        return 0.0;
+        return salesTax;
     }
 }
